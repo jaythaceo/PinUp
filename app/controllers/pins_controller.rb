@@ -1,6 +1,6 @@
 class PinsController < ApplicationController
 
-	def index	
+	def index
 	end
 
 	def show
@@ -20,7 +20,7 @@ class PinsController < ApplicationController
 
 	def destroy
 	end
-	
+
 	def upvote
 	end
 
