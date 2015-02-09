@@ -7,9 +7,11 @@ class PinsController < ApplicationController
 	end
 
 	def new
+		@pin = Pin.new
 	end
 
 	def create
+		@pin = Pin.new(pin_params)
 	end
 
 	def edit
@@ -26,7 +28,8 @@ class PinsController < ApplicationController
 
 	private
 
-	def pin_parms
+	def pin_params
+		params.require(:pin).permit(:title, :description)
 	end
 
 	def find_pin
